@@ -1,0 +1,147 @@
+/* rounding sharp edges on all elements */
+html:not(.legacy) *, button, input {--radius: 14px;}
+
+/* removes thin line dividers */
+hr.small {visibility: hidden;}
+hr { visibility: hidden;}
+nav {border: none;}
+
+/* floating animation for profile picture */
+.profile_avatar {
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {0% { transform: translateY(0);} 50% { transform: translateY(10px);} 100% { transform: translateY(0);} }
+
+/* profile card transparent */
+.flex.flex-col.gap-2.card.sm\:w-full {
+    box-shadow: none;
+    background: linear-gradient(0deg, #FAF1E6, #FAF1E6, #FAF1E6, #FAF1E6, transparent);
+}
+
+/* centered name */
+.status_note {
+display:none;}
+
+#names {
+text-align: center !important;
+width: 100% ; }
+
+h3.username {
+text-align: center !important;
+width: 100% ; }
+
+h4.username {
+text-align: center !important;
+width: 100% ; }
+
+/* profile card transparent */
+.flex.flex-col.gap-2.card.sm\:w-full {
+    box-shadow: none;
+    background: linear-gradient(0deg, #FAF1E6, #FAF1E6, #FAF1E6, #FAF1E6, transparent);
+}
+
+/* soft noise effect */
+body::before {
+content: "";
+display: block;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background:
+radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+background-size: 2px 2px, 2px 2px;
+background-position: 0 0, 1.5px 1.5px;
+opacity: 9;
+z-index: 2;
+pointer-events: none;
+}
+
+/* floating navigation */
+nav { position:fixed; top:22px; left:50%; transform:translateX(-50%); z-index:6374; display:flex; align-items:center; justify-content:center; padding:0.5rem 1rem; width:calc(100% - 2rem); max-width:1200px; background:linear-gradient(#DDDDDD,white); backdrop-filter:blur(12px); border-radius:25px; border:1px solid #4b4b4b; color:#4b4b4b !important; transition:opacity 0.15s ease }
+
+nav > * { display:flex; gap:3rem; align-items:center; justify-content:space-between; width:100% }
+
+/* BUBBLECHAT */
+/*QUESTIONS*/
+.card-nest .card:first-child{ background: linear-gradient(#DDDDDD, #FFFFFF, #FFFFFF) !important; color: #FFFFFF; margin: 0 0 0.5em !important;border-radius: 2em !important;padding: 0.5em 1em !important; clear: both !important; position: relative !important; box-shadow: none; border: 1px solid #9D9D9D ;border-bottom-left-radius: 0em !important;}
+
+/*ANSWERS*/
+.card-nest .card:nth-child(2){background: linear-gradient(#F8F0DF, #ffffff, #ffffff) !important; border-radius: 2em !important; clear: both; position: relative;  border: none !important; box-shadow: none; border: 1px solid #D9CAB3 !important; border-bottom-right-radius: 0em !important;}
+
+/* AVATAR */
+.avatar { border-radius: 100%; border: 2px solid #FFFFFF; }
+.profile_avatar { border-radius: 100%; border: 2px solid #D9CAB3; }
+
+/*============= B U T T O N S  AND  L I N K S =============*/
+a.button.bold {
+    border: 1px solid #4b4b4b;
+}
+a.button.bold:hover {
+  background: linear-gradient(to bottom, white, #e9e2ff, #e9e2ff);
+}
+button.primary:hover, a.button.primary:hover { background: linear-gradient(to bottom, white, white, #F7F6F2, #F7F6F2);}
+
+a[rel~="noopener"][rel~="noreferrer"]:not(.anchor) {
+  padding: 0.1em 0.6em;
+  color: #4b4b4b;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, #F8F0DF, #D9CAB3);
+  border: 1px solid #4b4b4b;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold; /* ini dia */
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1) !important;
+  position: relative;
+  top: 0 !important;
+}
+
+.pillmenu:hover {
+    background: linear-gradient(to bottom, white, #e9e2ff, #e9e2ff);
+    cursor: pointer;
+}
+
+.dropdown .inner.open {
+    border: 1px solid #4b4b4b;
+}
+.sidenav {border: 1px solid #4b4b4b;}
+
+.actions_bar {gap: 0 !important; justify-content: end !important;}
+.footernav {flex-wrap: nowrap !important; width: 100% !important;}
+button:has(.notification), .button:has(.notification) {gap: 0; padding: 4px !important;}
+button.w-full.camo {padding: 5px !important; border: 1px solid #4b4b4b;}
+span.date.item {display: inline-block !important; white-space: nowrap;}
+.pillmenu {
+    box-shadow: none; border: 1px solid #4b4b4b;  transition: background-color 0.3s ease;
+}
+
+/* ================== T A G S ============*/
+#names { display: flex; justify-content: center; flex-direction: column; align-items: center; }
+#question_box { box-shadow: none;}
+#page {
+    background: linear-gradient(to right, #F4F4F2, white, #F4F4F2) fixed !important;
+    flex: 1 0 auto;
+    justify-content: center;
+    max-width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    padding-top: 175px;
+}
+
+/* ----------------------- THE QUOTED RESPONSES------------------------*/
+.response .card:first-child[style="display: none"]+.card:nth-child(n-1), .response .card:first-child.hidden+.card:nth-child(n-1) {position: relative; border: 1px solid #4b4b4b !important; background: white !important; padding-top: 12px;}
+.response .card:first-child[style="display: none"]+.card:nth-child(n-1)::after, .response .card:first-child.hidden+.card:nth-child(n-1)::after {content: ""; bottom: 7px; left: 50%; z-index: -1;}
+.response .nested_response .card-nest {
+    transition: opacity .15s;
+    padding: 10px;
+background: linear-gradient(to right, #F8F0DF, white, #F8F0DF) fixed !important;
+    border: 1px solid #4b4b4b !important;
+}
+@media screen and (width <= 900px) {.sm\:items-start {align-items: flex-start !important; flex-direction: row !important;}}
+@media (max-width: 768px) {div.flex.flex-collapse.response_title {flex-direction: row !important;}} 
+
+
+
