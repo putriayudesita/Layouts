@@ -1,0 +1,153 @@
+/* rounding sharp edges on all elements */
+html:not(.legacy) *, button, input {--radius: 14px;}
+
+/* removes thin line dividers */
+hr.small {visibility: hidden;}
+hr { visibility: hidden;}
+nav {border: none;}
+
+/* background */
+#page {
+    position: relative;
+    background: linear-gradient(180deg,  
+        white,
+		white,
+        #FAFAFA,
+		#FAFAFA
+    ) fixed !important;
+    z-index: 0;
+}
+
+/* centered name */
+.status_note {
+display:none;}
+
+#names {
+    display: grid;
+    justify-content: center !important;
+}
+
+h3.username {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  border-right: 3px solid #493628;
+  animation: typing 3s steps(30) 1s infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  80% { width: 100%; } 
+  90% { width: 100%; } 
+  100% { width: 0; } 
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* profile card transparent */
+.flex.flex-col.gap-2.card.sm\:w-full {
+    box-shadow: none;
+    background: linear-gradient(0deg, #F2EFE7, #F2EFE7, #F2EFE7, #F2EFE7, transparent);
+}
+
+/* BUBBLECHAT */
+/*QUESTIONS*/
+.card-nest .card:first-child{ background: linear-gradient(#C2CFD8, #FFFFFF, #FFFFFF) !important; color: #FFFFFF; margin: 0 0 0.5em !important;border-radius: 2em !important;padding: 0.5em 1em !important; clear: both !important; position: relative !important; box-shadow: none; border: 1px solid #9D9D9D ;border-bottom-left-radius: 0em !important;}
+
+/*ANSWERS*/
+.card-nest .card:nth-child(2){background: linear-gradient(#D1D1D1, #ffffff, #ffffff) !important; border-radius: 2em !important; clear: both; position: relative;  border: none !important; box-shadow: none; border: 1px solid #D9CAB3 !important; border-bottom-right-radius: 0em !important;}
+
+/* background effect */
+body::before {
+content: "";
+display: block;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background:
+radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+background-size: 2px 2px, 2px 2px;
+background-position: 0 0, 1.5px 1.5px;
+opacity: 9;
+z-index: 2;
+pointer-events: none;
+}
+
+/* profile icon animation */
+.avatar { border-radius: 100%; border: 2px solid white; }
+.profile_avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%; 
+  border: 2px solid white;
+  position: relative; 
+  animation: customAni 5s ease 0s infinite normal none; }
+@keyframes customAni {
+  0% {
+	opacity: 1;
+  }
+
+  50% {
+	opacity: 0.2;
+  }
+
+  100% {
+	opacity: 1;
+  }
+}
+
+/* floating navigation */
+nav { position:fixed; top:22px; left:50%; transform:translateX(-50%); z-index:6374; display:flex; align-items:center; justify-content:center; padding:0.5rem 1rem; width:calc(100% - 2rem); max-width:1200px; background:linear-gradient(#7F8CAA,white); backdrop-filter:blur(12px); border-radius:25px; border:1px solid #766161; color:#4b4b4b !important; transition:opacity 0.15s ease }
+
+nav > * { display:flex; gap:3rem; align-items:center; justify-content:space-between; width:100% }
+
+/*============= B U T T O N S  AND  L I N K S =============*/
+a.button.bold {
+    border: 1px solid white;
+}
+a.button.bold:hover {
+  background: linear-gradient(to bottom, white, #87A7B3, #87A7B3);
+}
+button.primary:hover, a.button.primary:hover { background: linear-gradient(to bottom, white, white, #D1D1D1, #D1D1D1);}
+
+a[rel~="noopener"][rel~="noreferrer"]:not(.anchor) {
+  padding: 0.1em 0.6em;
+  color: #543A3A;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, white, #7882A4);
+  border: 1px solid #543A3A;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1) !important;
+  position: relative;
+  top: 0 !important;
+}
+
+.pillmenu:hover {
+    background: linear-gradient(to bottom, white, #D1D1D1, #D1D1D1);
+    cursor: pointer;
+}
+
+.dropdown .inner.open {
+    border: 1px solid white;
+}
+.sidenav {border: 1px solid #D1D1D1;}
+
+.actions_bar {gap: 0 !important; justify-content: end !important;}
+.footernav {flex-wrap: nowrap !important; width: 100% !important;}
+button:has(.notification), .button:has(.notification) {gap: 0; padding: 4px !important;}
+button.w-full.camo {padding: 5px !important; border: 1px solid #D1D1D1;}
+span.date.item {display: inline-block !important; white-space: nowrap;}
+.pillmenu {
+    box-shadow: none; border: 1px solid #D1D1D1;  transition: background-color 0.3s ease;
+}
+
